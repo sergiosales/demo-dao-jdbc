@@ -13,6 +13,8 @@ public class program {
 	public static void main(String[] args) {
 //	Department obj = new Department(1,"Logistica");
 //	seller seller = new seller(2, "paulo","sales@bol",new Date(),4.000,obj);
+		
+System.out.println("Teste 1====findById implementation======");	
 	SellerDao sellerDao = DaoFactory.createSellerDao();
 	
 	seller seller = sellerDao.findById(3);
