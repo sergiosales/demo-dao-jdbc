@@ -14,22 +14,29 @@ public class program {
 	public static void main(String[] args) {
 //	Department obj = new Department(1,"Logistica");
 //	seller seller = new seller(2, "paulo","sales@bol",new Date(),4.000,obj);
-		SellerDao sellerDao = DaoFactory.createSellerDao();	
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+
+		System.out.println("Teste 1====findById implementation======");
+		seller seller = sellerDao.findById(3);
+		System.out.println(seller);
+
+		System.out.println("\n Teste 2==== seller findByDepartment======");
+		Department department = new Department(2, null);
+		List<seller> lista = sellerDao.findByDepartment(department);
+		for (seller obj : lista) {
+			System.out.println(obj);
+
+		}
 		
-System.out.println("Teste 1====findById implementation======");		
-	seller seller = sellerDao.findById(3);
-	System.out.println(seller);
-	
-	System.out.println("\n Teste 2==== selle findByDepartment======");	
-Department department = new Department(2, null);
-	List<seller> lista = sellerDao.findByDepartment(department);
-	for( seller obj :lista) {
-		System.out.println(obj);
-		
-		
-	}
-	
-	
+		System.out.println("\n Teste 3==== seller findBall======");
+
+		 lista = sellerDao.findAll();
+		for (seller obj : lista) {
+			System.out.println(obj);
+
+		}
+
+
 //System.out.println(obj);
 	
 
