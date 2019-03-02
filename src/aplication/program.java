@@ -42,8 +42,12 @@ public class program {
 		System.out.println("inserido New id="+ newseller.getId());
 
 		
-		
-		
+		System.out.println("\n Teste 5==== seller update======");
+		seller= sellerDao.findById(1);
+		seller.setName("Paulo Sergio Sales");
+		seller.setEmail("paulounopar@hotmail.com");
+		sellerDao.update(seller);
+		System.out.println("update concluido");
 		
 //System.out.println(obj);
 	
